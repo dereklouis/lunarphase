@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import sun from './images/sun.png';
+import earth from './images/earth.png';
+import moon from './images/moon.png';
+import bigMoon from './images/bigMoon.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="appMaster">
+      <div id="bigMoonBox">
+        <img src={bigMoon} alt="current lunar phase" id="bigMoon" />
+        <div id="bigMoonShadow" />
+      </div>
+      <div id="earthOrbit">
+        <div id="lunarOrbit">
+          <div id="moonBox">
+            <img src={moon} alt="moon" id="moon" />
+            <div id="lunarShadow" />
+          </div>
+          <div id="earthBox">
+            <img src={earth} alt="earth" id="earth" />
+            <div id="earthShadow" />
+          </div>
+        </div>
+      </div>
+      <img src={sun} alt="sun" id="sun" />
     </div>
   );
 }
