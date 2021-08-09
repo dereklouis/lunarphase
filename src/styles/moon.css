@@ -1,0 +1,54 @@
+#lunarOrbit {
+  animation: lunarOrbit 27.5s linear 0s infinite;
+  position: absolute;
+  width: 30em;
+  height: 30em;
+  border: dashed 0.5em purple;
+  border-radius: 50%;
+  top: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#moonBox {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+}
+
+#moon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#lunarShadow {
+  animation: rotate 27.5s linear 0s infinite reverse;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0.8),
+    black
+  );
+  box-shadow: 0rem 0.1rem 0.3rem 0.2rem rgb(0, 0, 0);
+  z-index: 1;
+}
+
+@keyframes lunarOrbit {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
